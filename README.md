@@ -20,15 +20,3 @@ This repository contains solutions covering topics such as:
 - Heap / Priority Queue
 
 Solutions are automatically synced from LeetCode using LeetHub.
-
-<!---LeetCode Topics Start-->
-# LeetCode Topics
-## Array
-|  |
-| ------- |
-| [1672-richest-customer-wealth](https://github.com/aleconst/leetcode/tree/master/1672-richest-customer-wealth) |
-## Matrix
-|  |
-| ------- |
-| [1672-richest-customer-wealth](https://github.com/aleconst/leetcode/tree/master/1672-richest-customer-wealth) |
-<!---LeetCode Topics End-->
