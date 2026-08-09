@@ -6,7 +6,7 @@ public:
         for (int i = 1; i < paths.size(); i++)
             for (int j = 0; j < paths.size(); j++)
                 if (lastPlace == paths[j][0])
-                    lastPlace = paths[i][1];
+                    lastPlace = paths[j][1];
 
         return lastPlace;
     }
