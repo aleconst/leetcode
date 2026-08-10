@@ -19,11 +19,10 @@ public:
             }
         }
 
-        for (int i = 0; i < answer.size() / 2; i++)
-            swap (answer[i], answer[answer.size() - i - 1]);
+        reverse (answer.begin(), answer.end());
 
         for (int i = 0; i < answer.size(); i++)
-            answer[i] = pow (answer[i], 2);
+            answer[i] *= answer[i];
 
         return answer;
     }
