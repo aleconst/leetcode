@@ -1,28 +1,30 @@
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
-        vector<int> answer;
+        vector<int> answer(nums.size(), 0);
+
         int left = 0;
         int right = nums.size() - 1;
+        int index = nums.size() - 1;
 
         while (left <= right)
         {
             if (abs(nums[left]) > abs(nums[right]))
             {
-                answer.push_back (nums[left]);
+                answer[index] = nums[left];
+                index--;
                 left++;
             }
             else
             {
-                answer.push_back (nums[right]);
+                answer[index] = nums[right];
+                index--;
                 right--;
             }
         }
 
-        reverse (answer.begin(), answer.end());
-
         for (int i = 0; i < answer.size(); i++)
-            answer[i] *= answer[i];
+            answer[i] = pow(answer[i], 2);
 
         return answer;
     }
