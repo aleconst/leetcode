@@ -1,17 +1,19 @@
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-        int k = 0;
-        
+        int index = 0;
+        int counter = 0;
+
         for (int i = 0; i < nums.size(); i++)
         {
             if (nums[i] != val)
             {
-                swap(nums[i], nums[k]);
-                k++;
+                nums[index] = nums[i];
+                index++;
+                counter++;
             }
         }
 
-        return k;
+        return counter;
     }
 };
