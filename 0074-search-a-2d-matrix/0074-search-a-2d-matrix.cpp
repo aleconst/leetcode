@@ -11,9 +11,12 @@ public:
         {
             int middle = left + (right - left) / 2;
 
-            if (matrix[middle / n][middle % n] == target)
+            int row = middle / n;
+            int col = middle % n;
+
+            if (matrix[row][col] == target)
                 return true;
-            else if (matrix[middle / n][middle % n] > target)
+            else if (matrix[row][col] > target)
                 right = middle - 1;
             else
                 left = middle + 1;
