@@ -3,29 +3,29 @@ public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         int index1 = m - 1;
         int index2 = n - 1;
-        int k = m + n - 1;
+        int index = m + n - 1;
 
         while (index1 >= 0 && index2 >= 0)
         {
-            if (nums1[index1] > nums2[index2])
+            if (nums1[index1] < nums2[index2])
             {
-                nums1[k] = nums1[index1];
-                k--;
-                index1--;
+                nums1[index] = nums2[index2];
+                index2--;
             }
             else
             {
-                nums1[k] = nums2[index2];
-                k--;
-                index2--;
+                nums1[index] = nums1[index1];
+                index1--;
             }
+
+            index--;
         }
 
         while (index2 >= 0)
         {
-            nums1[k] = nums2[index2];
-            k--;
+            nums1[index] = nums2[index2];
             index2--;
+            index--;
         }
     }
 };
