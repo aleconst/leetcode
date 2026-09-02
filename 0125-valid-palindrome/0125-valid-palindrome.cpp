@@ -2,8 +2,8 @@ class Solution {
 public:
     bool isPalindrome(string s) {
         
-        if (!s.size())
-            return 1;
+        if (s.empty())
+            return true;
 
         int left = 0;
         int right = s.size() - 1;
@@ -17,12 +17,12 @@ public:
                 right--;
             
             if (tolower(s[left]) != tolower(s[right]))
-                return 0;
+                return false;
 
             left++;
             right--;
         }
 
-        return 1;
+        return true;
     }
 };
