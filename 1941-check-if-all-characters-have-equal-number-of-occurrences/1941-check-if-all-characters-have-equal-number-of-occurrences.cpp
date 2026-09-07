@@ -1,15 +1,15 @@
 class Solution {
 public:
     bool areOccurrencesEqual(string s) {
-        unordered_map<char, int> seen;
+        unordered_map<char, int> freq;
 
-        for (const char& c : s)
-            seen[c]++;
+        for (const char& character : s)
+            freq[character]++;
 
-        int val = seen[s[0]];
+        int val = freq.begin() -> second;
 
-        for (const char& c : s)
-            if (seen[c] != val)
+        for (const auto& [character, count] : freq)
+            if (count != val)
                 return false;
 
         return true;
