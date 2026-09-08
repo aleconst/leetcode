@@ -8,15 +8,10 @@ public:
 
         for (const char& c : s)
         {
-            if (stk.empty())
-                stk.push(c);
+            if (!stk.empty() && stk.top() == c)
+                stk.pop();
             else
-            {
-                if (stk.top() == c)
-                    stk.pop();
-                else
-                    stk.push(c);
-            }
+                stk.push(c);
         }
 
         while (!stk.empty())
