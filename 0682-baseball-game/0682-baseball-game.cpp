@@ -11,10 +11,10 @@ public:
                 
                 stk.pop();
 
-                int sum = last + stk.top();
+                int new_score = last + stk.top();
                 
                 stk.push(last);
-                stk.push(sum);
+                stk.push(new_score);
             }
             else if (c == "D")
                 stk.push(2 * stk.top());
