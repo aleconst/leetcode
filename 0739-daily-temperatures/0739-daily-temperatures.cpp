@@ -4,7 +4,7 @@ public:
         stack<int> stk;
         vector<int> answer(temperatures.size());
 
-        for (int i = static_cast<int>(temperatures.size() - 1); i >= 0; i--)
+        for (int i = static_cast<int>(temperatures.size()) - 1; i >= 0; i--)
         {
             while (!stk.empty() && temperatures[stk.top()] <= temperatures[i])
                 stk.pop();
@@ -12,7 +12,7 @@ public:
             if (stk.empty())
                 answer[i] = 0;
             else
-                answer[i] = abs(stk.top() - i);
+                answer[i] = stk.top() - i;
 
             stk.push(i);
         }
