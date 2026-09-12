@@ -4,6 +4,9 @@
 class Solution {
 public:
     int firstBadVersion(int n) {
+        if (n == 1)
+            return 1;
+
         int left = 1;
         int right = n;
         int sol = -1;
