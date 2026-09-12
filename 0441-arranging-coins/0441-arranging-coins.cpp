@@ -1,9 +1,9 @@
 class Solution {
 public:
     int arrangeCoins(int n) {
-        int left = 0;  
-        int right = n;
-        int sol = 0;
+        long long left = 0;  
+        long long right = n;
+        long long  sol = 0;
 
         while (left <= right)
         {
