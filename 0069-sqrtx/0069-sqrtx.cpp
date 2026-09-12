@@ -1,9 +1,9 @@
 class Solution {
 public:
     int mySqrt(int x) {
-        int left = 0;
-        int right = x;
-        int sol = 0;
+        long long left = 0;
+        long long right = x;
+        long long sol = 0;
 
         while (left <= right)
         {
