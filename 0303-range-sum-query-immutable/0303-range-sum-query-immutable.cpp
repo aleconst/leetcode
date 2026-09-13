@@ -4,7 +4,7 @@ private:
 
 public:
     NumArray(vector<int>& nums) {
-        prefix.reserve (nums.size() + 1);
+        prefix.resize (nums.size() + 1, 0);
 
         for (int i = 0; i < nums.size(); i++)
             prefix[i + 1] = prefix[i] + nums[i];
